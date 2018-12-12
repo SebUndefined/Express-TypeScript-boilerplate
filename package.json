@@ -2,10 +2,11 @@
   "name": "typescript-express-boilerplate",
   "version": "1.0.0",
   "description": "Express + TypeScript boilerplate",
+  "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./src/server.ts",        
-    "start": "nodemon ./dist/server.js",
+    "dev": "DEBUG=* ts-node ./src/InitApp.ts",
+    "start": "nodemon ./dist/InitApp.js",
     "prod": "npm run build && npm run start"
   },
   "repository": {
@@ -17,5 +18,22 @@
   "bugs": {
     "url": "https://github.com/SebUndefined/Express-TypeScript-boilerplate/issues"
   },
-  "homepage": "https://github.com/SebUndefined/Express-TypeScript-boilerplate#readme"
+  "homepage": "https://github.com/SebUndefined/Express-TypeScript-boilerplate#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.1",
+    "@types/debug": "0.0.31",
+    "@types/errorhandler": "0.0.32",
+    "@types/express": "^4.16.0",
+    "@types/method-override": "0.0.31",
+    "@types/morgan": "^1.7.35",
+    "nodemon": "^1.18.8"
+  }
 }
