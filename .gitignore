@@ -4,5 +4,5 @@ node_modules/
 
 
 #Exclude tsc generated files
-dist/*.map
-dist/*.js
+dist/*/*.map
+dist/*/*.js
