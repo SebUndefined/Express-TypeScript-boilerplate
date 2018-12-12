@@ -1,12 +1,12 @@
 import * as Server from "./AppStart/Server"
 import * as Debug from "debug"
 import * as Http from 'http'
-
+import * as express from "express";
 
 class InitApp {
 
     private httpPort: number
-    private app: any
+    private app: express.Application
     private httpServer:Http.Server
 
     constructor() {
@@ -52,7 +52,5 @@ class InitApp {
       
       
 }
-
-let myApp = new InitApp()
 
 InitApp.initialize()
