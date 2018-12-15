@@ -46,7 +46,7 @@ export class ClientController extends Controller {
         let listClient: Array<Client> = [
             new Client(1, "TACHIER", "Sébastien", new Date(1988, 10, 22)),
             new Client(2, "TACHIER", "Lucie", new Date(1996, 11, 22)),
-            new Client(3, "TACHIER", "Yann", new Date(1989, 4, 13)),
+            new Client(3, "TACHIER", "Yann", new Date(1987, 4, 13)),
         ]
 
         //render template
@@ -61,7 +61,7 @@ export class ClientController extends Controller {
         let listClient: Array<Client> = [
             new Client(1, "TACHIER", "Sébastien", new Date(1988, 10, 22)),
             new Client(2, "TACHIER", "Lucie", new Date(1996, 11, 22)),
-            new Client(3, "TACHIER", "Yann", new Date(1989, 4, 13)),
+            new Client(3, "TACHIER", "Yann", new Date(1987, 4, 13)),
         ]
         let client : Client = listClient.find(client => client.ClientID == Number(req.params.clientID));
         if(client == null) {
