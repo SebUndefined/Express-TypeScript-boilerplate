@@ -5,6 +5,8 @@ import * as logger from "morgan";
 import * as path from "path";
 import errorHandler = require("errorhandler");
 import methodOverride = require("method-override");
+import { HomeController } from "../Controller/HomeController";
+import { ClientController } from "../Controller/ClientController";
 
 /**
  * The server.
@@ -40,9 +42,6 @@ export default class Server {
     //configure application
     this.config();
 
-    //add routes
-    this.routes();
-
     //add api
     this.api();
   }
@@ -54,7 +53,13 @@ export default class Server {
    * @method api
    */
   public api() {
-    //empty for now
+    let router: express.Router = express.Router();
+    // Register Routes
+    HomeController.Create(router);
+    ClientController.Create(router);
+    
+     //use router middleware
+    this.app.use(router);
   }
 
   /**
@@ -67,13 +72,4 @@ export default class Server {
     //empty for now
   }
 
-  /**
-   * Create router
-   *
-   * @class Server
-   * @method api
-   */
-  public routes() {
-    //empty for now
-  }
 }

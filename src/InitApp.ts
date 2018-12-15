@@ -21,8 +21,7 @@ class InitApp {
         myApp.httpServer.listen(myApp.httpPort);
 
         myApp.httpServer.on("listening", function(){
-            const debug = Debug("kkj");
-            debug("pouet")
+            const debug = Debug("Debugging");
             let url = myApp.httpServer.address()
             let bind = typeof url === "string"
                 ? "pipe " + url
